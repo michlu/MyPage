@@ -1,0 +1,222 @@
+body {
+    color: #1a1a1a;
+/*    background-color: #0C0C0C;*/
+    background-image: url("/gfx/dark_geometric.png");
+    background-attachment: fixed;
+    font-family: "Roboto Slab",serif;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Montserrat",sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+li {
+    padding: 0 0 10px;
+}
+
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+/*    background: #0C0C0C;*/
+    padding: 46px;
+    position: fixed;
+    height: 100%;
+    width: 260px;
+    z-index: 5;
+}
+
+
+/*--- AVATAR---*/
+
+.header .avatar {
+    overflow: hidden;
+    width: 165px;
+    height: 165px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+     -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    filter: grayscale(1.0);
+}
+
+.header .avatar:hover {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    filter: grayscale(0.0);
+}
+
+.header .avatar img {
+    width: 100%;
+}
+
+.header .name {
+    margin: 34px 0;
+}
+
+.header .name h1 {
+    font-family: "Montserrat",sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFF;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+}
+
+.header .name span {
+    color: #777676;
+    font-family: "Roboto Slab",serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/*--- Navigation ---*/
+
+.header .main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header .main-nav ul li {
+    padding-bottom: 15px;
+}
+
+.header .main-nav ul li a {
+    color: #bebebe;
+    font-family: "Montserrat",sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.header .main-nav ul li a:hover,.header .main-nav ul li a:focus {
+    color: #FFF;
+    text-decoration: none;
+/*
+    background: #2169ff;
+    background: -moz-linear-gradient(-45deg, #2169ff 0%, #6d47ff 48%, #bf23fe 100%);
+    background: -webkit-linear-gradient(-45deg, #2169ff 0%,#6d47ff 48%,#bf23fe 100%);
+    background: linear-gradient(135deg, #2169ff 0%,#6d47ff 48%,#bf23fe 100%);
+*/
+    
+    border-bottom: solid 4px #FFF;
+}
+
+.header .main-nav ul li:last-child {
+    padding-bottom: 0;
+}
+
+
+/*--- Social Icons ---*/
+
+.header .social-icons {
+    margin: 30px 0 30px;
+}
+
+.header .social-icons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .social-icons ul li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+
+.header .social-icons ul li a:hover {
+    filter: brightness(3.0);
+}
+
+.header .social-icons ul li:last-child {
+    padding-right: 0;
+}
+
+
+/*--- Main Page ---*/
+
+.main-content {
+    background: #FFF;
+    width: 740px;
+}
+
+.main-content section {
+    padding: 60px 70px;
+    position: relative;
+    border-bottom: solid 1px #EEE;
+}
+
+/*--- Fone Menu Bar ---*/
+/* TODO*/
+
+/*--- Bootstrap ---*/
+
+@media only screen and (max-width: 991px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .header {
+        -ms-transform: translateX(-260px);
+        -webkit-transform: translateX(-260px);
+        transform: translateX(-260px);
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    .main-content {
+        width: 100%;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .main-content section {
+        padding: 60px 30px;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    .header .name {
+        margin: 15px 0;
+    }
+
+    .header .main-nav ul li {
+        padding-bottom: 10px;
+    }
+
+    .header .social-icons {
+        margin: 0 0 15px;
+    }
+}
